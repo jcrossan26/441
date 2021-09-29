@@ -23,10 +23,11 @@ def callback1():
     for dc in range(101):
       pwm1.ChangeDutyCycle(dc)
       sleep(0.01)
-
-GPIO.add_event_detect(
-  23,
-  GPIO.FALLING,
-  callback=callback1,
-  bouncetime=100
-)
+      
+while True:
+  GPIO.add_event_detect(
+    23,
+    GPIO.FALLING,
+    callback=callback1,
+    bouncetime=100
+  )
