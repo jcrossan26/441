@@ -4,8 +4,8 @@ from time import sleep
 GPIO.setmode(GPIO.BCM)
 
 #Input GPIO for buttons
-GPIO.setup(23, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
-GPIO.setup(24, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
+GPIO.setup(23, GPIO.IN)
+GPIO.setup(24, GPIO.IN)
 
 #Output GPIO for LEDs
 GPIO.setup(16, GPIO.OUT, initial=0)
@@ -17,7 +17,7 @@ button2 = GPIO.input(24)
 
 pwm1 = GPIO.PWM(16,1)
 
-def callback1(23):
+def callback1():
   GPIO.output(16,1)
 
 while True:
