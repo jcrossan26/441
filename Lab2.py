@@ -24,7 +24,7 @@ def callback1():
 while True:
   GPIO.add_event_detect(
     23,
-    GPIO.FALLING,
+    GPIO.RISING,
     callback=callback1,
     bouncetime=100
   )
