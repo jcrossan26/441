@@ -18,12 +18,8 @@ button2 = GPIO.input(24)
 pwm1 = GPIO.PWM(16,1)
 
 def callback1():
-  pwm1.start(0)
-  while 1:
-    for dc in range(101):
-      pwm1.ChangeDutyCycle(dc)
-      sleep(0.01)
-      
+  GPIO.output(16,1)
+
 while True:
   GPIO.add_event_detect(
     23,
