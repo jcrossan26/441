@@ -22,6 +22,10 @@ def callback1():
   print("Detected")
 
 while True:
+  if(button1 == 1):
+    GPIO.output(16,1)
+    print("I ran")
+    
   GPIO.add_event_detect(
     23,
     GPIO.RISING,
