@@ -26,6 +26,7 @@ while True:
     GPIO.output(16,1)
 
   print(button1)
+  print(button2)
   GPIO.add_event_detect(
     23,
     GPIO.RISING,
