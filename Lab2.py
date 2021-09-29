@@ -24,8 +24,8 @@ def callback1():
 while True:
   if(button1 == 1):
     GPIO.output(16,1)
-    print("I ran")
-    
+
+  print(button1)
   GPIO.add_event_detect(
     23,
     GPIO.RISING,
