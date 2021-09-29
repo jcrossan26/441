@@ -17,7 +17,7 @@ button2 = GPIO.input(24)
 
 pwm1 = GPIO.PWM(16,1)
 
-def callback1():
+def callback1(23):
   GPIO.output(16,1)
 
 while True:
@@ -27,3 +27,6 @@ while True:
     callback=callback1,
     bouncetime=100
   )
+
+
+  GPIO.remove_event_detect(23)
