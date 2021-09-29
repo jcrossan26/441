@@ -19,6 +19,7 @@ pwm1 = GPIO.PWM(16,1)
 
 def callback1():
   GPIO.output(16,1)
+  print("Detected")
 
 while True:
   GPIO.add_event_detect(
