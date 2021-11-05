@@ -29,7 +29,7 @@ def loop(dir): # dir = rotation direction (cw or ccw)
     for halfstep in range(8): # 8 half-steps per cycle
       for pin in range(4):    # 4 pins that need to be energized
         GPIO.output(pins[pin], dir[halfstep][pin])
-      delay_us(800)
+      delay_us(1000)
 try:
   loop(cw)
   loop(ccw)
