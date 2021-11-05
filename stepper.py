@@ -40,9 +40,12 @@ class zero:
             print(lightValueNew)
             zerStep += 1
           else:
-            print(zerStep)
+            return(zerStep)
             break
         delay_us(2000)
-  loop(cw)
+  stepCount = loop(cw)
+  return(stepCount)
 
 coolman = zero()
+print(coolman)
+print("working!!")
