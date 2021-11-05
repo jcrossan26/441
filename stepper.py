@@ -25,11 +25,11 @@ def delay_us(tus): # use microseconds to improve time resolution
 
 lightValueOld = 209
 lightValueNew = 0
-zerStep = 0
 
 class zero:
   # Make a full rotation of the output shaft:
   def loop(dir): # dir = rotation direction (cw or ccw)
+    zerStep = 0
     for i in range(512): # full revolution (8 cycles/rotation * 64 gear ratio)
       for halfstep in range(8): # 8 half-steps per cycle
         for pin in range(4):    # 4 pins that need to be energized
