@@ -25,5 +25,5 @@ class zero:
           #break
         delay_us(3000)
 
-zero()
+zero(cw)
 
