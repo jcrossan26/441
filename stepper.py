@@ -35,11 +35,11 @@ class zero:
           GPIO.output(pins[pin], dir[halfstep][pin])
           lightValueNew = mybus.read_byte(0x48)
           print(lightValueNew)
-        #if(lightValueNew < lightValueOld):
-          #return(zeroStep)
-          #break
+          if(lightValueNew < lightValueOld):
+            return(zeroStep)
+            break
         delay_us(3000)
   loop(cw)
 
-zero()
-
+location = zero()
+print(location)
