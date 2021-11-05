@@ -18,6 +18,11 @@ ccw = [ [1,0,0,0],[1,1,0,0],[0,1,0,0],[0,1,1,0],
 cw = ccw[:]  # use slicing to copy list (could also use ccw.copy() in Python 3)
 cw.reverse() # reverse the new cw sequence
 
+def delay_us(tus): # use microseconds to improve time resolution
+  endTime = time.time() + float(tus)/ float(1E6)
+  while time.time() < endTime:
+    pass
+
 
 class zero:
   lightValueOld = 100
