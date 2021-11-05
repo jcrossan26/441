@@ -37,11 +37,13 @@ class zero:
             lightValueNew = mybus.read_byte(0x48)
             print(lightValueNew)
           else:
-            return(i)
-            print("I worked!")
+            zerStep = i
             break
         delay_us(3000)
-  loop(cw)
+  try:
+    loop(cw)
+  except:
+    print("Printy!")
 
 location = zero()
 print(location)
