@@ -43,7 +43,7 @@ class zero:
   try:
     loop(cw)
   except:
-    print("Printy!")
+    print(zerStep)
 
 location = zero()
 print(location)
