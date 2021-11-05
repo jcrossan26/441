@@ -27,5 +27,4 @@ class zero:
 
 
 zeroAngle = zero()
-theangle = zeroAngle.loop(cw)
-print(theangle)
+print(zeroAngle)
