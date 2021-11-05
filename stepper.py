@@ -7,8 +7,6 @@ pins = [18,21,22,23] # controller inputs: in1, in2, in3, in4
 for pin in pins:
   GPIO.setup(pin, GPIO.OUT, initial=0)
 
-class goAngle:
-
 
 # Define the pin sequence for counter-clockwise motion, noting that
 # two adjacent phases must be actuated together before stepping to
