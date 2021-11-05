@@ -25,6 +25,7 @@ def delay_us(tus): # use microseconds to improve time resolution
 
 lightValueOld = 209
 lightValueNew = 0
+zerStep = 0
 class zero:
   # Make a full rotation of the output shaft:
   def loop(dir): # dir = rotation direction (cw or ccw)
