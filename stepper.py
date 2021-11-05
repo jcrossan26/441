@@ -44,8 +44,6 @@ class zero:
         delay_us(3000)
   try:
     loop(cw)
-  except:
-    print("cool: " + str(zerStep) + " coolio")
 
 location = zero()
 print(location)
