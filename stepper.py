@@ -42,7 +42,7 @@ class zero:
           else:
             print(zerStep)
             break
-        delay_us(3000)
+        delay_us(2000)
   loop(cw)
 
 coolman = zero()
