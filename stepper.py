@@ -29,8 +29,6 @@ class zero:
   # Make a full rotation of the output shaft:
   def loop(dir): # dir = rotation direction (cw or ccw)
     for i in range(512): # full revolution (8 cycles/rotation * 64 gear ratio)
-      zeroStep = i
-      print(i)
       for halfstep in range(8): # 8 half-steps per cycle
         for pin in range(4):    # 4 pins that need to be energized
           lightValueNew = mybus.read_byte(0x48)
@@ -40,6 +38,7 @@ class zero:
             print(lightValueNew)
           else:
             return(i)
+            print("I worked!")
             break
         delay_us(3000)
   loop(cw)
