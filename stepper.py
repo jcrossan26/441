@@ -7,6 +7,9 @@ pins = [18,21,22,23] # controller inputs: in1, in2, in3, in4
 for pin in pins:
   GPIO.setup(pin, GPIO.OUT, initial=0)
 
+class goAngle:
+
+
 # Define the pin sequence for counter-clockwise motion, noting that
 # two adjacent phases must be actuated together before stepping to
 # a new phase so that the rotor is pulled in the right direction:
@@ -28,7 +31,7 @@ def loop(dir): # dir = rotation direction (cw or ccw)
     for halfstep in range(8): # 8 half-steps per cycle
       for pin in range(4):    # 4 pins that need to be energized
         GPIO.output(pins[pin], dir[halfstep][pin])
-      delay_us(1000)
+      delay_us(500)
 try:
   loop(cw)
   loop(ccw)
