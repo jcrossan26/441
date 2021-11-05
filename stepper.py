@@ -45,5 +45,5 @@ class zero:
   try:
     loop(cw)
 
-location = zero()
-print(location)
+zero()
+
