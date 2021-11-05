@@ -19,12 +19,11 @@ class zero:
         for pin in range(4):    # 4 pins that need to be energized
           GPIO.output(pins[pin], dir[halfstep][pin])
         lightValueNew = mybus.read_byte(0x48)
-        if(lightValueNew < lightValueOld):
-          return(zeroStep)
-          break
-
+        print(lightValueNew)
+        #if(lightValueNew < lightValueOld):
+          #return(zeroStep)
+          #break
         delay_us(3000)
 
+zero()
 
-zeroAngle = zero()
-print(zeroAngle)
