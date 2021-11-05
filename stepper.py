@@ -24,6 +24,7 @@ class zero:
           #return(zeroStep)
           #break
         delay_us(3000)
+  loop(cw)
 
-zero(cw)
+zero()
 
