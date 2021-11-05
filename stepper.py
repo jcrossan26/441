@@ -23,7 +23,8 @@ def delay_us(tus): # use microseconds to improve time resolution
   while time.time() < endTime:
     pass
 
-lightValueOld = 100
+lightValueOld = 209
+lightValueNew = 0
 class zero:
   # Make a full rotation of the output shaft:
   def loop(dir): # dir = rotation direction (cw or ccw)
@@ -31,10 +32,11 @@ class zero:
       zeroStep = i
       for halfstep in range(8): # 8 half-steps per cycle
         for pin in range(4):    # 4 pins that need to be energized
-          GPIO.output(pins[pin], dir[halfstep][pin])
-          lightValueNew = mybus.read_byte(0x48)
-          print(lightValueNew)
-          if(lightValueNew < lightValueOld):
+          if(lightValueNew != lightValueOld)  
+            GPIO.output(pins[pin], dir[halfstep][pin])
+            lightValueNew = mybus.read_byte(0x48)
+            print(lightValueNew)
+          else
             return(zeroStep)
             break
         delay_us(3000)
