@@ -30,6 +30,7 @@ class zero:
   def loop(dir): # dir = rotation direction (cw or ccw)
     for i in range(512): # full revolution (8 cycles/rotation * 64 gear ratio)
       zeroStep = i
+      print(ZeroStep)
       for halfstep in range(8): # 8 half-steps per cycle
         for pin in range(4):    # 4 pins that need to be energized
           lightValueNew = mybus.read_byte(0x48)
