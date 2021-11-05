@@ -44,7 +44,7 @@ class zero:
   try:
     loop(cw)
   except:
-    print("cool: " + zerStep + " coolio")
+    print("cool: " + str(zerStep) + " coolio")
 
 location = zero()
 print(location)
