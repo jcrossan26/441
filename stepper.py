@@ -26,7 +26,7 @@ class zero():
         delay_us(3000)
 try:
   loop(cw)
-GPIO.cleanup() 
+  GPIO.cleanup() 
 
 
 zeroAngle = zero()
