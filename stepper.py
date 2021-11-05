@@ -23,9 +23,8 @@ def delay_us(tus): # use microseconds to improve time resolution
   while time.time() < endTime:
     pass
 
-
+lightValueOld = 100
 class zero:
-  lightValueOld = 100
   # Make a full rotation of the output shaft:
   def loop(dir): # dir = rotation direction (cw or ccw)
     for i in range(512): # full revolution (8 cycles/rotation * 64 gear ratio)
