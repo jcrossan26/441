@@ -3,7 +3,7 @@ import time
 
 GPIO.setmode(GPIO.BCM)
 
-pins = [12,16,20,21] # controller inputs: in1, in2, in3, in4
+pins = [18,21,22,23] # controller inputs: in1, in2, in3, in4
 for pin in pins:
   GPIO.setup(pin, GPIO.OUT, initial=0)
 
