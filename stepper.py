@@ -46,5 +46,4 @@ class zero:
   try:
     loop(cw)
 
-zero()
-
+coolman = zero()
