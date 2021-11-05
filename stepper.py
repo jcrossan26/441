@@ -9,7 +9,7 @@ for pin in pins:
   GPIO.setup(pin, GPIO.OUT, initial=0)
 
 
-class zero():
+class zero:
   lightValueOld = 100
   # Make a full rotation of the output shaft:
   def loop(dir): # dir = rotation direction (cw or ccw)
@@ -24,10 +24,8 @@ class zero():
           break
 
         delay_us(3000)
-try:
-  loop(cw)
-  GPIO.cleanup() 
 
 
 zeroAngle = zero()
-print(zeroAngle)
+theangle = zeroAngle.loop(cw)
+print(theangle)
