@@ -36,7 +36,7 @@ class zero:
             GPIO.output(pins[pin], dir[halfstep][pin])
             lightValueNew = mybus.read_byte(0x48)
             print(lightValueNew)
-          else
+          else:
             return(zeroStep)
             break
         delay_us(3000)
