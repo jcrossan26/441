@@ -44,7 +44,6 @@ class zero:
             break
         delay_us(2000)
   stepCount = loop(cw)
-  return(stepCount)
 
 coolman = zero()
 print(coolman)
