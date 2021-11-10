@@ -15,13 +15,3 @@ pattern = [
 
 self.shifter.shiftByte(pattern[1])
 
-class LED8x8():
-  'Class for controlling an 8x8 LED display'
-  
-  def display(self, pattern)
-
-
-  def setNumber(self, num): # display a given number
-    self.shifter.shiftByte(LED8x8.pattern[num])
-  def setNumber(self, num): # display a given number
-    self.shifter.shiftByte(LED8x8.pattern[num])
